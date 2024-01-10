@@ -1,0 +1,141 @@
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.brandname{
+    font-weight: 700;
+    color: var(--Orange);
+}
+
+.description{
+    line-height: 2rem;
+    color: var(--DarkGrayishBlue);
+}
+
+.prices{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.prices p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.prices span{
+    padding: .2rem .8rem;
+    background-color: var(--PaleOrange);
+    color: var(--Orange);
+    font-size: 1rem;
+    border-radius: .5rem;
+}
+
+.prices s {
+    color: var(--GrayishBlue);
+    font-weight: 700;
+}
+
+.amount{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--LightGrayishBlue);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.amount button{
+    cursor: pointer;
+    color: var(--Orange);
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+.amount p {
+    text-align: center;
+    font-weight:700;
+}
+
+.btnAddToCart{
+    background-color: var(--Orange);
+    color:white;
+    border-radius: 1rem;
+    border:none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btnAddToCart > img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(337deg) brightness(100%) contrast(102%);
+}
+
+.btnAddToCart > div {
+    background-color: white;
+    height:0;
+    width:30px;
+    padding-top: 9%;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('/icon-cart.svg');
+    mask-image: url('/public//icon-cart.svg');
+}
+
+@media screen and (min-width: 280px) {
+    .content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .brandname{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .content h1{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        font-size: 2.5rem;
+    }
+
+    .description{
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+
+    .prices{
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    .amount{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .btnAddToCart{
+        grid-column: 2/4;
+        grid-row: 5/6;
+        font-size: 1rem;
+        
+    }
+}

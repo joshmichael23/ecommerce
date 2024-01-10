@@ -1,0 +1,152 @@
+.header{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.right > img{
+    width:100%;
+}
+
+@media screen and (min-width: 800px) {
+
+    .header{
+        border-bottom: 1px solid var(--GrayishBlue);
+        
+        height:auto;
+    }
+    
+}
+
+.left, .right{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, auto));
+    width: auto;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+    .header button{
+        background-color: white; 
+        border:none;
+        height:100%;    
+        cursor: pointer;
+    }
+
+    .left a{
+        color: var(--DarkGrayishBlue);
+        font-size: .9rem;
+        transition: all .2s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .left a::after{
+        position: absolute;
+        left:50%;
+        bottom: 0;
+        content:'';
+        margin-bottom: -2rem;
+        border-bottom: 3px solid var(--Orange);
+        width:0;
+        transition: all .2s ease;
+    }
+
+    .left a:hover::after{
+        left:0;
+        width:100%;
+    }
+
+    .left a:hover{
+        color:black;
+    }
+
+
+
+
+
+@media screen and (min-width:280px) {
+    .header button.mobileMenu{
+        display:block;
+    }
+
+    .left a{
+        display: none;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .header button.mobileMenu{
+        display:none;
+    }
+
+    .left{
+        position: relative;
+        grid-template-columns: repeat(6, auto);
+        gap: 2rem;
+        align-items: stretch;
+        margin-bottom: 2rem;
+        
+    }
+
+    .header{
+        padding: 2rem 2rem 0px 2rem;
+        align-items: stretch;
+    }
+
+    .left > img{
+        position: relative;
+        margin-bottom: auto;
+        align-self: center;
+        top:0;
+    }
+
+    .left a{
+        display: block;
+    }
+
+    .right{
+        align-items: start;
+    }
+
+    .right > img{
+        width:100%;
+        max-width: 50px;
+        transform: translateY(-.5rem);
+    }
+}
+
+.cart{
+    cursor: pointer;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart > span{
+    position: absolute;
+    bottom: 1rem;
+    left: .5rem;
+    color: var(--PaleOrange);
+    background-color: var(--Orange);
+    font-weight:700;
+    padding:0px .5rem;
+    border-radius: 1rem;
+}
+
+.profile-pic{
+    cursor: pointer;
+    transition: outline .1s ease;
+    border-radius: 50%;
+}
+
+.profile-pic:hover{
+    outline: 2px solid var(--Orange);
+    
+}

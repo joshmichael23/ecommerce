@@ -1,0 +1,58 @@
+.test{
+    background-color: red;
+    font-size: 5rem;
+}
+
+.mobilemenu{
+    height: 100%;
+    position: absolute;
+    width: 100vw;
+    background-color: hsl(0, 0%, 0%, .75);
+    
+    top:0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: .2s ease;
+    
+}
+
+@media screen and (min-width:280px) {
+    .mobilemenu{
+        display:block;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .mobilemenu{
+        display:none;
+    }
+}
+
+.wrapper{
+    padding: 2rem;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+}
+
+.mobilemenu button{
+    background: none;
+    border:none;
+}
+.open{
+    transform: translateX(0);
+}
+
+.links{
+    list-style-type: none;
+}
+
+.links > li{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.links > li:first-child{
+    margin-top: 3rem;
+}

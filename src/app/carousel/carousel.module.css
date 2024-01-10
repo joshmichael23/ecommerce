@@ -1,0 +1,141 @@
+.pictures-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    border-radius: 1rem;
+    display: grid;
+    row-gap: 1rem;
+
+}
+
+.product-image{
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    display:none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -22px;
+    left: 1rem;
+    color: black;
+    background-color:white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -22px;
+
+    place-content: center;
+    align-items: center;
+    color: black;
+    background-color:white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+
+    user-select: none;
+    right:1rem;
+}
+
+.next > span{
+    height:auto;
+}
+
+.active{
+    display: block;
+}
+
+.thumbnails{
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.thumbnails > a {
+    position: relative;
+    max-height:90px;
+    width: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.thumbnails > a:hover::after{
+    background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.thumbnails > a:focus{
+    border: 3px solid var(--Orange);
+}
+
+.thumbnails > a::after{
+    left:0;
+    border-radius: 1rem;
+    position: absolute;
+    content:'';
+    top:0;
+    height:100%;
+    width:100%;
+    background-color: transparent;
+    transition: background-color .2s ease;
+}
+.thumbnails > a:focus::after{
+    background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.thumbnails > a > img{
+    object-fit: contain;
+    border-radius: 1rem;
+    width:100%;
+    height:auto;
+}
+
+@media screen and (min-width: 280px) {
+    .prev, .next{
+        display:flex;
+    }
+
+    .thumbnails{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .prev, .next{
+        display:none;
+    }
+
+    .thumbnails{
+        display: grid;
+    }
+}
