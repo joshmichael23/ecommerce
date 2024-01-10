@@ -14,7 +14,7 @@ export default function RootLayout() {
     <html lang="en">
       <body>
           
-        <Carousel />
+        <h1>test</h1>
       </body>
     </html>
   )
