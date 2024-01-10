@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Root from './Root/root'
-
+import Carousel from './carousel/carousel'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -13,7 +13,8 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
       <body>
-        <Root></Root>
+          
+        <Carousel />
       </body>
     </html>
   )
