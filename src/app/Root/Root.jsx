@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Main from '../main/Main';
 import Header from '../header/header.jsx';
-import MobileMenu from '../MobileMenu/MobileMenu';
+import MobileMenu from '../MobileMenu/MobileMenu.jsx';
 
 
 function Root() {
