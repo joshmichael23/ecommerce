@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from 'react'
-import Main from '../main/Main';
+import Main from '../main/main';
 import Header from '../header/header.jsx';
-import MobileMenu from '../MobileMenu/MobileMenu.jsx';
+import MobileMenu from '../MobileMenu/mobileMenu.jsx';
 
 
 function Root() {

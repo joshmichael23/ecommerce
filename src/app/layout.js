@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Root from './Root/Root.jsx'
+import Root from './Root/root.jsx'
 
 
 

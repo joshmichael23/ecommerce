@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import main from './Main.module.css';
 import Carousel from '../carousel/carousel.jsx';
-import Content from '../content/Content.jsx';
-import Cart from '../Cart/Cart.jsx';
+import Content from '../content/content.jsx';
+import Cart from '../Cart/cart.jsx';
 
 const Main = (props) => {
   
