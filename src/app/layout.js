@@ -13,9 +13,9 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
       <body>
-        {children.Root}
-        <Root></Root>
-        
+        <>
+          <Root></Root>
+        </>
       </body>
     </html>
   )
